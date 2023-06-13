@@ -43,13 +43,22 @@ void print_menu(string name) {
 
    cin>> choice;
 
-   if(choice == 4){
-    exit(0);
-   }else if (choice==2){
-      add_item();
-   } else {
-    cout <<"We do not have response for your choice yet"<<endl;
-   }
+
+
+   switch (choice) {
+    case 4:
+        exit(0);
+        break;
+    case 1:
+        print_list();
+    case 2:
+        add_item();
+        break;
+    default:
+        cout << "We do not have a response for your choice yet" << endl;
+        break;
+    }
+
     
 
 }
@@ -83,5 +92,22 @@ void delete_item(){
 }
 
 void print_list(){
+  //check if the user have something in their list first 
 
-}
+  if(list.size()){
+    //if they do then pring it out 
+    cout <<"Here is your list of item"<<endl;
+    for(int i = 0; i<list.size();i++){
+        cout<<list[i]<<endl;
+    }
+        
+    }else{
+        cout << "The is empty";
+
+        //call the add item 
+        add_item();
+    }
+
+
+  }
+
