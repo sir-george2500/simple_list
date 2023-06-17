@@ -1,1 +1,1 @@
-obj/main.o: /home/george/Documents/C++/simple_list/main.cpp
+obj/main.o: src/main.cpp src/include/list.h

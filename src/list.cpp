@@ -1,33 +1,7 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "include/list.h"
 
-//function prototype
-
-void print_menu(string name);
-void print_list();
-void add_item();
-void delete_item();
-
-//vector
-vector<string>  list;
-
-string name;
-
-int main (int count ,char *args[]){
-    
-    if(count>1){
-        print_menu(name);
-
-    }else{
-        cout <<"User did now Supplied a argument"<<endl;
-    }
-    return 0;
-}
-
-
-
-void print_menu(string name) {
+//member function of the class List
+void List::print_menu() {
 
     int choice;
     cout<<"*************************************"<<endl;
@@ -50,6 +24,7 @@ void print_menu(string name) {
         break;
     case 1:
         print_list();
+        break;
     case 2:
         add_item();
         break;
@@ -64,9 +39,11 @@ void print_menu(string name) {
 
 //Add item
 
-void add_item(){
-  cout<<"\n\n\n\n\n\n\n\n\n";
+void  List::add_item(){
+  cout<<"\n\n\n\n\n\n\n\n";
   cout<<"** Add a item **\n";
+
+  //enter your name;
 
   cout<<"Please Enter Your item and enter ";
 
@@ -80,17 +57,17 @@ void add_item(){
   cout<<"Sucessfull add item to list"<<endl;
   cin.clear();
 
-  print_menu(name);
+  print_menu();
 
 }
 
 //delete a item
 
-void delete_item(){
+void List::delete_item(){
    
 }
 
-void print_list(){
+void List::print_list(){
   //check if the user have something in their list first 
 
   if(list.size()){
