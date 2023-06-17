@@ -17,7 +17,6 @@ string name;
 int main (int count ,char *args[]){
     
     if(count>1){
-        name;
         print_menu(name);
 
     }else{
@@ -66,7 +65,7 @@ void print_menu(string name) {
 //Add item
 
 void add_item(){
-  cout<<"\n\n\n\n\n\n\n";
+  cout<<"\n\n\n\n\n\n\n\n\n";
   cout<<"** Add a item **\n";
 
   cout<<"Please Enter Your item and enter ";
@@ -95,15 +94,14 @@ void print_list(){
   //check if the user have something in their list first 
 
   if(list.size()){
-    //if they do then pring it out 
+    //if they do then print it out 
     cout <<"Here is your list of item"<<endl;
-    for(int i = 0; i<list.size();i++){
+    for(int i = 0; i< (int) list.size();i++){
         cout<<list[i]<<endl;
     }
         
     }else{
-        cout << "The is empty";
-
+        cout << "The is list empty";
         //call the add item 
         add_item();
     }
